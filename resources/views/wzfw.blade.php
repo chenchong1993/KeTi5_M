@@ -12,6 +12,7 @@
    <script type="text/javascript" charset="utf-8">
       mui.init();
    </script>
+   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
    <link rel="stylesheet" type="text/css" href="/Ips_api_javascript/dijit/themes/tundra/tundra.css"/>
    <link rel="stylesheet" type="text/css" href="/Ips_api_javascript/esri/css/esri.css" />
    <link rel="stylesheet" type="text/css" href="/Ips_api_javascript/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
@@ -54,9 +55,12 @@
 </header>
 
 <div class="mui-content" >
-   <div class="mui-input-row mui-search mui-input-speech index-search theme-bgcolor" style="position: relative;z-index: 1000">
-      <input type="search" class="mui-input-clear" placeholder="搜索">
+   <div class="mui-input-row  mui-input-speech index-search theme-bgcolor" style="position: relative;z-index: 1000">
+      <form action="#" onsubmit="return false;">
+         <input type="search" id="keyword" placeholder="搜索">
+      </form>
    </div>
+
 </div>
 {{--位置服务布局代码--}}
 <div id="map_wzfw" class="">
@@ -64,7 +68,17 @@
 <button id="start" style="position: absolute">起点</button>
 <button id="stop">终点</button>
 <button id="analysis">分析</button>
+<script>
+   $("#keyword").on('keypress',function(e) {
+      var keycode = e.keyCode;
+      var searchName = $(this).val();
+      if(keycode=='13') {
+         e.preventDefault();
+         console.log(searchName);
 
+      }
+   });
+</script>
 <script>
    var map_wzfw;
    require([

@@ -35,11 +35,11 @@
     </h1>
 </header>
 
-<div class="mui-content" >
-    <div class="mui-input-row mui-search mui-input-speech index-search theme-bgcolor" style="position: relative;z-index: 1000">
-        <input type="search" class="mui-input-clear" placeholder="搜索">
-    </div>
-</div>
+{{--<div class="mui-content" >--}}
+    {{--<div class="mui-input-row mui-search mui-input-speech index-search theme-bgcolor" style="position: relative;z-index: 1000">--}}
+        {{--<input type="search" class="mui-input-clear" placeholder="搜索">--}}
+    {{--</div>--}}
+{{--</div>--}}
 
 
 </body>

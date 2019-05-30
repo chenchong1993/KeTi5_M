@@ -60,7 +60,6 @@
          <input type="search" id="keyword" placeholder="搜索">
       </form>
    </div>
-
 </div>
 {{--位置服务布局代码--}}
 <div id="map_wzfw" class="">
